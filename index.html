@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rainy Music</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/favicon.ico">
+    <script src="jquery-3.7.1.min.js"></script>
+    <script src="animation.js"></script>
+</head>
+<body>
+    <div id="loading">
+        <div class="spinner">
+            <div class="rect1"></div>
+            <div class="rect2"></div>
+            <div class="rect3"></div>
+            <div class="rect4"></div>
+            <div class="rect5"></div>
+          </div>
+    </div>
+
+    
+   <header id="header" class="wrapper">
+        <h1  class="site-title">
+            <a href="index.html"><img src="images/logosmall.png" alt="ロゴ"></a>
+        </h1>
+
+        <nav>
+            <ul class="gnavi">
+                <li class="current"><a href="index.html">HOME</a></li>
+                <li><a href="#">GOODS</a></li>
+                <li><a href="#">SOUND</a></li>
+            </ul>
+        </nav>
+   </header> 
+
+
+    
+    <main>
+
+        <div class="rains">
+            <span></span><span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span><span></span>
+        </div>
+
+        <div id="mainvisual" class="wrapper">
+                    <div id="mark">
+                            <img src="images/logobig.png" alt="" class="logobig fadeLeft">
+
+                            <div class="relative fadeLeft delay03">
+                                <img src="images/rotatetext.png" alt="" class="rotate">
+                                <div class="circle abusolute zoomInHoverTrigger" ><a href="">GOODS<br>SHOP</a></div>
+                            </div><!--relative-->
+                    </div><!--mark-->
+
+                        <div id="slideshow" class="fadeRight delay06">
+                                    <div class="item1 slideritem"></div>
+                                    <div class="item2 slideritem"></div>
+                                    <div class="item3 slideritem"></div>
+                        </div><!--slideshow-->
+        </div><!--mainvisual-->
+
+         <div id="rightanime">
+            <ul id="chara" class="delayScroll">
+                 <li class="box"><img src="images/鼓笛隊（指揮者）.png" alt="" class="musicteam dotmotion"></li>
+                 <li class="box"><img src="images/鼓笛隊（フルート）.png" alt="" class="musicteam dotmotion delay2"></li>
+                 <li class="box"><img src="images/鼓笛隊（トランペット）.png" alt="" class="musicteam dotmotion delay3"></li>
+                 <li class="box"><img src="images/鼓笛隊（チューバ）.png" alt="" class="musicteam dotmotion delay4"></li>
+            </ul><!--chara-->
+
+              <div class="bgextend bgRLextend healing"><span class="bgappear"><img src="images/雨音PROJECTデザイン_10.png" alt="" ></span></div>
+         </div><!--rightanime-->
+
+        
+
+        <section id="about">
+
+            <h1>雨音PROJECTとは</h1>
+            <div class="aboutbox">
+                    
+                <ul class="imgbox delayScrollUp">
+                    <li class="box"><img src="images/雨.png" alt="" class="dot1"></li>
+                    <li class="box"><img src="images/カエル.png" alt="" class="dot1" ></li>
+                    <li class="box"><img src="images/紫陽花（あじさい）.png" alt="" class="dot1" ></li>
+                </ul>
+
+                <div class="textbox fadeUpTrigger ">
+                    <p>「雨を楽しむ」というコンセプトのもと生まれたプロジェクト<br>
+                     雨音や雨具、雨をテーマにした作品など、様々な角度から雨を<br>
+                     一つのコンテンツとして確立させるためのプロジェクトです</p>
+                </div>
+
+
+            </div><!--aboutbox-->
+
+            <div class="btnarea delayScrollUp">
+                <div class="button box"><a href="#">アマグッズ▶</a></div>
+                <div class="button box"><a href="#">サウンド▶</a></div>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <div class="center" ><a href="#"><img src="images/logobig.png" alt=""  id="page-top"></a></div>
+    </footer>
+
+
+
+
+</body>
+</html>
