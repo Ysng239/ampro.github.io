@@ -11,7 +11,7 @@ img {
 }
 
 .wrapper {
-    max-width: 100vw;
+    width: 100vw;
     margin: 0 auto;
 }
 
@@ -146,6 +146,8 @@ main {
 .gnavi li a:hover::after {
     transform: scale(1, 1);/*X方向にスケール拡大*/
 }
+
+.sp-nav {display: none;}
  
 /*main------------------------------------------------*/
 #mainvisual {
@@ -194,8 +196,7 @@ main {
     position: absolute;
     top: 80px;
     left: 80px;
-
-}
+  }
 @keyframes rotate {
     0% {
       transform: rotate(0deg);
@@ -320,13 +321,16 @@ main {
   }
 .item1 {
     background-image: url(images/rain.jpg);
+    background-position: center;
 }
 .item2 {
     background-image: url(images/raingrass.jpg);
+    background-position: center;
     animation-delay: 4s;
 }
 .item3 {
     background-image: url(images/rainspider.jpg);
+    background-position: center;
     animation-delay: 8s;
 }
 
@@ -376,13 +380,13 @@ animation-timing-function: steps(2, end);
 animation-iteration-count: infinite;
 }
 .delay2 {
-    animation-delay: 4s;
+    animation-delay: 2s;
 }
 .delay3 {
-    animation-delay: 8s;
+    animation-delay: 3s;
 }
 .delay4 {
-    animation-delay: 12s;
+    animation-delay: 4s;
 }
 @keyframes dot {
     0% {
@@ -577,7 +581,7 @@ animation-iteration-count: infinite;
 .center {
     text-align: center;
 }
-.cemter img {
+.center img {
  width: 100%;
 }
 
@@ -688,10 +692,243 @@ animation-iteration-count: infinite;
 
 /*レスポンシブ対応--------------------------------------------------------------------------------------------------*/
 @media screen and (max-width: 995px){
+     
+      .wrapper{
+        width: cover;
+      }
+
+        #header {
+          width: 100%;
+          margin: 0;
+          display: flex;
+          justify-content: center;
+          height: 60px;
+          }
+
+          /*ハンバーガーメニュー----------------------------------------------
+          #header ul li a {
+            color: #fff;
+          }
+
+        #header .gnavi {
+          display: none;
+        }
+
+        #hamburger {
+          position: relative;
+          display: block;
+          width: 30px;
+          height: 25px;
+          margin: 0 0 0 auto;
+       }
+       #hamburger span {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        display: block;
+        width: 100%;
+        height: 3px;
+        background-color: #1d7ebc;
+        transform: translateY(-50%);
+     }
+
+     #hamburger::before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background-color: #1d7ebc;
+   }
+   #hamburger::after {
+      content: '';
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 70%;
+      height: 3px;
+      background-color: #1d7ebc;
+   }
+
+   .sp-nav {
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: block;
+    width: 100%;
+    background: rgba(0, 0, 0, .8);
+    transition: all .2s ease-in-out;
+    opacity: 0;
+   transform: translateY(-100%);
+ }
+ .sp-nav ul {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.sp-nav li {
+  margin: 0;
+  padding: 0;
+}
+.sp-nav li span {
+  font-size: 15px;
+  color: #fff;
+}
+.sp-nav li a, .sp-nav li span {
+  display: block;
+  padding: 20px 0;
+}
+/*基準となるli要素
+.sp-nav .close {
+  position: relative;
+  padding-left: 20px;
+}
+/*バツ印線1
+.sp-nav .close::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  display: block;
+  width: 16px;
+  height: 1px;
+  background: #fff;
+  transform: rotate( 45deg );
+}
+/*バツ印線2
+.sp-nav .close::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  display: block;
+  width: 16px;
+  height: 1px;
+  background: #fff;
+  transform: rotate( -45deg );
+}
+
+.toggle {
+  transform: translateY( 0 );
+  opacity: 1;
+}
+   /*-----------------------------------------------------------------------*/
+   
+        #header ul {
+          padding: 30px 0;
+          flex-wrap: nowrap;
+      }
+      
+      #header img {
+        display: none;
+      }
+
+      main {
+        padding-top: 60px;
+      }
+      #mainvisual {
+        display: block;
+        margin: 0;
+      }
+
+      #mark {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+      }
+      .logobig {
+        width: 50%;
+        height: 50%;
+      }
+      .relative {
+        display: none;
+      }
+      .circle {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background-color: #55b5d9;
+        color: #FFF;
+        font-size: 40px;
+        font-weight: bold;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        display: none;
+    }
+    .circle a {
+       text-decoration: none;
+       color: #fff;
+    } 
 
 
+    .rotate {
+      width: 300px;
+      height: 300px;
+      object-fit: cover;
+      animation: rotate 6s linear infinite;
+      display: none;
+  }
 
 
+      #slideshow {
+        width:100%;
+        border: none;
+        border-radius: 0;
+      }
+      .slideritem {
+        width: 100%;
+      }
+
+      #rightanime {
+        width: 95%;
+        padding-top: 10px;
+        margin-left: 5%;
+      }
 
 
+      #chara img {
+         height: 80%;
+      }
+      
+
+      .aboutbox {
+        display: block;
+      }
+      .imgbox {
+        margin: 0;
+        justify-content: center;
+      }
+
+      .textbox {
+        text-align: center;
+        font-size: 18px;
+      }
+
+      .btnarea {
+        display: block;
+      }
+
+      .btn1 {
+        padding-bottom: 100px;
+      }
+
+      .button a {
+        padding: 30px 60px 30px 60px;
+        font-size: 20px;
+      }
+
+      .center img {
+        width: 50%;
+        height: 50%;
+      }
 }
